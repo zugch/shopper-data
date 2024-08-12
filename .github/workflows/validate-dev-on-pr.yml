@@ -1,0 +1,14 @@
+name: validate dev on pr
+
+on:
+  pull_request:
+    branches:
+      - main
+    
+jobs:
+  json-validate-job:
+    name: JSON Validation
+    uses: ./.github/workflows/json-validation.yml
+    with:
+      branch: dev
+    secrets: inherit

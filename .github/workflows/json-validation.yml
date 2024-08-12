@@ -16,7 +16,7 @@ jobs:
       - name: Print the chosen branch to STDOUT
         run: echo ${{ inputs.branch }}
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ inputs.branch }}
       - name: Do validation
